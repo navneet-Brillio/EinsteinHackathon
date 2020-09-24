@@ -1,7 +1,7 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
     
     <aura:attribute name="developerName" type="String" default="AnalyticJobDash" access="GLOBAL"/>
-    <aura:attribute name="height" type="Integer" default="500" access="GLOBAL"/>
+    <aura:attribute name="height" type="Integer" default="1000" access="GLOBAL"/>
     
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
     
