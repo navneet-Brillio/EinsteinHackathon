@@ -1,0 +1,103 @@
+{
+  "templateType" : "embeddedapp",
+  "label" : "AnalyticAppTemplate",
+  "name" : "AnalyticApp",
+  "namespace" : "eahack",
+  "assetVersion" : 50.0,
+  "variableDefinition" : "variables.json",
+  "uiDefinition" : "ui.json",
+  "autoInstallDefinition" : "auto-install.json",
+  "rules" : [
+    {
+      "type" : "templateToApp",
+      "file" : "template-to-app-rules.json"
+    },
+    {
+      "type" : "appToTemplate",
+      "file" : "app-to-template-rules.json"
+    }
+  ],
+  "releaseInfo" : {
+    "templateVersion" : "1.1",
+    "notesFile" : "releaseNotes.html"
+  },
+  "folderDefinition" : "folder.json",
+  "externalFiles" : [
+    {
+      "label" : "Industry Wise Posting",
+      "name" : "Industry_Wise_Posting",
+      "condition" : "${Variables.Overrides.createAllExternalFiles}",
+      "file" : "external_files/Industry_Wise_Posting.csv",
+      "type" : "CSV",
+      "schema" : "external_files/Industry_Wise_Posting.json",
+      "userXmd" : "external_files/Industry_Wise_Posting_XMD.json",
+      "rows" : 5
+    },
+    {
+      "label" : "Occupation Wise Posting",
+      "name" : "Occupation_Wise_Posting",
+      "condition" : "${Variables.Overrides.createAllExternalFiles}",
+      "file" : "external_files/Occupation_Wise_Posting.csv",
+      "type" : "CSV",
+      "schema" : "external_files/Occupation_Wise_Posting.json",
+      "userXmd" : "external_files/Occupation_Wise_Posting_XMD.json",
+      "rows" : 5
+    },
+    {
+      "label" : "Statewise Covid",
+      "name" : "Statewise_Covid",
+      "condition" : "${Variables.Overrides.createAllExternalFiles}",
+      "file" : "external_files/Statewise_Covid.csv",
+      "type" : "CSV",
+      "schema" : "external_files/Statewise_Covid.json",
+      "userXmd" : "external_files/Statewise_Covid_XMD.json",
+      "rows" : 5
+    },
+    {
+      "label" : "Job Posting vs Covid",
+      "name" : "Job_Posting_vs_Covid",
+      "condition" : "${Variables.Overrides.createAllExternalFiles}",
+      "file" : "external_files/Job_Posting_vs_Covid.csv",
+      "type" : "CSV",
+      "schema" : "external_files/Job_Posting_vs_Covid.json",
+      "userXmd" : "external_files/Job_Posting_vs_Covid_XMD.json",
+      "rows" : 5
+    }
+  ],
+  "lenses" : [ ],
+  "dashboards" : [
+    {
+      "label" : "AnalyticJobDash",
+      "name" : "AnalyticJobDash_tp",
+      "condition" : "${Variables.Overrides.createAllDashboards}",
+      "file" : "dashboards/AnalyticJobDash.json"
+    }
+  ],
+  "eltDataflows" : [ ],
+  "recipes" : [ ],
+  "datasetFiles" : [ ],
+  "storedQueries" : [ ],
+  "imageFiles" : [
+    {
+      "name" : "TimeTracker_Imagepng",
+      "condition" : "${Variables.Overrides.createAllImages}",
+      "file" : "images/TimeTracker Image.png"
+    },
+    {
+      "name" : "home6png",
+      "condition" : "${Variables.Overrides.createAllImages}",
+      "file" : "images/home6.png"
+    }
+  ],
+  "extendedTypes" : { },
+  "templateDependencies" : [ ],
+  "icons" : {
+    "appBadge" : {
+      "name" : "16.png"
+    },
+    "templateBadge" : {
+      "name" : "default.png"
+    },
+    "templatePreviews" : [ ]
+  }
+}

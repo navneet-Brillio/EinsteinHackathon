@@ -1,0 +1,10 @@
+{
+  "name" : "AnalyticApp",
+  "label" : "AnalyticApp",
+  "description" : null,
+  "featuredAssets" : { },
+  "shares" : [{
+    "accessType": "View",
+    "shareType": "Organization"
+  }]  
+}
